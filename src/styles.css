@@ -41,12 +41,12 @@
 }
 
 .comment {
-   text-decoration: none;
-   background-color: #a82d49;
-   padding: 10px;
-   width: 40%;
-   margin: 10px auto;
-   color: #fff;
+  text-decoration: none;
+  background-color: #a82d49;
+  padding: 10px;
+  width: 40%;
+  margin: 10px auto;
+  color: #fff;
 }
 
 .comment:hover {
