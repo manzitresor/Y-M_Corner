@@ -19,12 +19,4 @@ export const getMealsData = async () => {
       `;
   });
   mainContainer.innerHTML = episodes;
-
-  const comments = document.querySelectorAll('.comment');
-  comments.forEach((comment) => {
-    comment.addEventListener('click', (e) => {
-      e.preventDefault();
-      console.log('comment clicked');
-    });
-  });
 };
