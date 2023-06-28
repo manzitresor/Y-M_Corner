@@ -1,7 +1,7 @@
 import { Modal } from '../../node_modules/bootstrap/dist/js/bootstrap.js';
 import { toString, toJson } from './converter.js';
 // import { Modal } from 'bootstrap';
-import { ServerURL } from './config.js';
+import { ServerURL, appId, likeUrl } from './config.js';
 
 class Meal {
   constructor() {
@@ -18,14 +18,15 @@ class Meal {
   loadContent = async () => {
     const meals = await this.loadFromServer();
     let episodes = '';
-    meals.forEach((res) => {
+    meals.forEach((res, id) => {
       episodes += `
       <div class="col-md-3">
         <div class="meals-container">
         <img src='${res.strCategoryThumb}' class='image'>
         <div class="like-container">
         <p class='meals'>Meal: ${res.strCategory}</p>
-        <i class="far fa-heart like"></i>
+        <i class="far fa-heart likebtn" id="${id}"></i>
+        <span class="showLikes" id="${id}"></span>
         </div>
         <a href='#' class="comment comment-modal-btn" data-meal='${toString(res)}'>Comments</a>
         <a href='#' class='reservation'>Reservations</a>
@@ -35,7 +36,45 @@ class Meal {
     });
     this.mainContainer.innerHTML = episodes;
     this.listener();
+    const showLikes = document.querySelectorAll('.showLikes');
+    const likebtns = document.querySelectorAll('.likebtn');
+    likebtns.forEach((likebtn) => this.createLike(likebtn, showLikes));
+    this.showLike(showLikes);
   };
+
+  getLike = async () => {
+    const likeApi = await fetch(`${likeUrl}/${appId}/likes`);
+    const res = await likeApi.json();
+    return res;
+  }
+
+  showLike = async (showLikes) => {
+    const likesNumbers = await this.getLike();
+    likesNumbers.forEach((likenumber) => {
+      showLikes.forEach((showlike) => {
+        if (likenumber.item_id === showlike.id) {
+          showlike.textContent = `${likenumber.likes}Likes`;
+        }
+      });
+    });
+  }
+
+  createLike = async (likebtn, showLikes) => {
+    likebtn.addEventListener('click', async (e) => {
+      const { id } = e.target;
+      const likeApi = await fetch(`${likeUrl}/${appId}/likes/`, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json; charset=UTF-8',
+        },
+        body: JSON.stringify({
+          item_id: id,
+        }),
+      });
+      await likeApi.text();
+      this.showLike(showLikes);
+    });
+  }
 
   listener = () => {
     const commentModalBtn = document.querySelectorAll('.comment-modal-btn');

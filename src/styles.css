@@ -29,11 +29,11 @@ body {
   justify-content: space-between;
 }
 
-.like {
+.likebtn {
   padding-top: 3px;
 }
 
-.like:hover {
+.likebtn:hover {
   cursor: pointer;
 }
 
