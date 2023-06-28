@@ -20,13 +20,13 @@ body {
   flex-direction: column;
   border: 2px solid #a82d49;
   border-radius: 10px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 }
 
 .like-container {
   padding: 20px;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
 .like {
@@ -55,24 +55,28 @@ body {
   border: none;
 }
 
-.comment, .reservation {
+.comment,
+.reservation {
   text-align: center;
   text-decoration: none;
   padding: 10px 20px;
   color: #fff;
 }
+
 .comment {
   background-color: #333;
 }
+
 .reservation {
   background-color: #a82d49;
   width: 100%;
 }
 
-.comment:hover  {
+.comment:hover {
   background-color: #a82d49;
 }
-.reservation:hover  {
+
+.reservation:hover {
   background-color: #333;
 }
 
