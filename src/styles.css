@@ -1,3 +1,60 @@
-body {
-  background-color: rgb(204, 212, 218);
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.meals-container {
+  margin-top: 40px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #a82d49;
+}
+
+.like-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.like {
+  padding-right: 10px;
+}
+
+.like:hover {
+  cursor: pointer;
+}
+
+.image {
+  width: auto;
+  object-fit: cover;
+}
+
+.meals {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.comment {
+  text-align: center;
+  text-decoration: none;
+  background-color: #a82d49;
+  padding: 10px;
+  width: 40%;
+  margin: 10px auto;
+  color: #fff;
+}
+
+.comment:hover {
+  color: #a82d49;
+  background-color: #fff;
+  border: 2px solid #a82d49;
 }
