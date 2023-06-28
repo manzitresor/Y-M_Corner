@@ -1,6 +1,6 @@
 import { Modal } from '../../node_modules/bootstrap/dist/js/bootstrap.js';
 import { toString, toJson } from './converter.js';
-import mealcardCounter from './likeCounter.js';
+import mealcardCounter from './mealCounter.js';
 // import { Modal } from 'bootstrap';
 import { ServerURL, appId, likeUrl } from './config.js';
 
