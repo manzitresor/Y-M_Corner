@@ -1,5 +1,6 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import * as data from './modules/data.js';
+import Meal from './modules/meal.js';
 
-data.getMealsData();
+const meal = new Meal();
+meal.loadContent();

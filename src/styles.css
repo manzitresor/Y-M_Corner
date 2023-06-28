@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 
-* {
+body {
+  background-color: #fff;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -14,28 +14,23 @@
   color: #a82d49;
 }
 
-.main-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-}
-
 .meals-container {
   margin-top: 40px;
-  height: 400px;
   display: flex;
   flex-direction: column;
   border: 2px solid #a82d49;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .like-container {
+  padding: 20px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content:space-between;
 }
 
 .like {
-  padding-right: 10px;
+  padding-top: 3px;
 }
 
 .like:hover {
@@ -43,30 +38,42 @@
 }
 
 .image {
+  margin: 10px;
   width: auto;
   object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .meals {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: normal;
   text-align: center;
 }
 
-.comment {
+.modal-header {
+  border: none;
+}
+
+.comment, .reservation {
   text-align: center;
   text-decoration: none;
-  background-color: #a82d49;
-  padding: 10px;
-  width: 40%;
-  margin: 10px auto;
+  padding: 10px 20px;
   color: #fff;
 }
+.comment {
+  background-color: #333;
+}
+.reservation {
+  background-color: #a82d49;
+  width: 100%;
+}
 
-.comment:hover {
-  color: #a82d49;
-  background-color: #fff;
-  border: 2px solid #a82d49;
+.comment:hover  {
+  background-color: #a82d49;
+}
+.reservation:hover  {
+  background-color: #333;
 }
 
 footer {
