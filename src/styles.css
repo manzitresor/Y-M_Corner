@@ -4,6 +4,16 @@
   font-family: 'Quicksand', sans-serif;
 }
 
+.navbar-nav li {
+  padding: 0 20px;
+  color: #a82d49;
+  font-weight: bold;
+}
+
+.navbar-nav li a{
+  color: #a82d49;
+}
+
 .main-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -57,4 +67,10 @@
   color: #a82d49;
   background-color: #fff;
   border: 2px solid #a82d49;
+}
+
+footer{
+  border-top: 1px solid #ccc;
+  margin-top: 24px;
+  padding: 16px 0;
 }
