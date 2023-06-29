@@ -22,11 +22,15 @@ class CommentBox {
         .join('');
     }
 
-    commentCounter.innerHTML = comments.length;
+    this.onCounter(commentCounter, comments.length);
   };
 
   onSubmit = async (data) => {
     await new Request().post(`${likeUrl}/${appId}/comments`, data);
+  }
+
+  onCounter = (commentDIV, total) => {
+    commentDIV.textContent = `(${total})`;
   }
 }
 export default CommentBox;
