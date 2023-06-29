@@ -2,7 +2,7 @@
 
 
 <div align="center">
-  <h3><b>Add tests for comments counter </b></h3>
+  <h3><b>Add comments counter </b></h3>
 
 </div>
 
@@ -25,9 +25,9 @@
 - [📝 License](#license)
 
 
-# 📖 Add tests for comments counter <a name="about-project"></a>
+# 📖 Add comments counter <a name="about-project"></a>
 
-**In this project, I add tests for comments counter**
+**In this project,  I implement a comment counter. It will count the number of comments in for each popup and update when a new comment is added**
 
 
 ## 🛠 Built With <a name="built-with"></a>
