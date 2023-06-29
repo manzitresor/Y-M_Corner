@@ -67,7 +67,7 @@ Live Demo Link: <a href="https://manzitresor.github.io/js_Capstone/dist/">Live d
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Video Presentation <a name="live-demo"></a>
- <a href="#">Video Presentation</a>
+ <a href="https://drive.google.com/file/d/1rBns2FiSWynehYJJCK7YT4iNP7LXIbpG/view?usp=sharing">Video Presentation</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
