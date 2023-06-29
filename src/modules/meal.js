@@ -1,5 +1,6 @@
 import { Modal } from '../../node_modules/bootstrap/dist/js/bootstrap.js';
 import { toString, toJson } from './converter.js';
+import mealcardCounter from './mealCounter.js';
 import { ServerURL, appId, likeUrl } from './config.js';
 import Request from './api_request.js';
 import CommentBox from './comment_box.js';
@@ -44,6 +45,7 @@ class Meal {
     const likebtns = document.querySelectorAll('.likebtn');
     likebtns.forEach((likebtn) => this.createLike(likebtn, showLikes));
     this.showLike(showLikes);
+    mealcardCounter(this.totalMeals, this.mealsArry);
   };
 
   getLike = async () => {
