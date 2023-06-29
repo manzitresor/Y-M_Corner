@@ -95,7 +95,7 @@ Clone this repository to your desired folder:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/yemidada/js_Capstone.git
+$ git clone https://github.com/manzitresor/js_Capstone.git
 
 # Go into the repository
 $ cd js_Capstone
