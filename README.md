@@ -69,7 +69,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Live Demo <a name="live-demo"></a>
-Live Demo Link: <a href="#">Live demo</a>
+Live Demo Link: <a href="https://manzitresor.github.io/js_Capstone/dist/">Live demo</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,8 +165,8 @@ Feel free to check the <a href="https://github.com/manzitresor/js_Capstone/issue
 
 If you like this project,You can follow me on Github
   
-<a href ="https://github.com/manzitresor">[@githubhandle]</a> 
-<a href ="https://github.com/yemidada">[@githubhandle]</a> 
+<a href ="https://github.com/manzitresor">manzitresor[@githubhandle]</a> 
+<a href ="https://github.com/yemidada">yemidada[@githubhandle]</a> 
 
 
 
