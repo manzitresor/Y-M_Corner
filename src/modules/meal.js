@@ -42,6 +42,7 @@ class Meal {
     });
     this.mainContainer.innerHTML = episodes;
     this.listener();
+    this.modalCommentForm();
     const showLikes = document.querySelectorAll('.showLikes');
     const likebtns = document.querySelectorAll('.likebtn');
     likebtns.forEach((likebtn) => this.createLike(likebtn, showLikes));
@@ -85,40 +86,47 @@ class Meal {
 
   listener = () => {
     const comment = new CommentBox();
-
     const commentModalBtn = document.querySelectorAll('.comment-modal-btn');
     commentModalBtn.forEach((c) => c.addEventListener('click', async (e) => {
       const meal = toJson(e.target.getAttribute('data-meal'));
-      const commentList = document.getElementById('comment-list');
 
       if (meal) {
         const modalImage = document.getElementById('modalImage');
         const modalTitle = document.getElementById('modalTitle');
         const modalDesc = document.getElementById('modalDesc');
+        const modalCommentId = document.getElementById('modalCommentId');
 
         modalTitle.innerHTML = meal.strCategory;
         modalDesc.innerHTML = meal.strCategoryDescription;
         modalImage.src = meal.strCategoryThumb;
+        modalCommentId.value = meal.idCategory;
 
-        let comments = await comment.onLoad(meal.idCategory);
-        if (comments.error) {
-          comments = [];
-        }
-        if (comments.length === 0) {
-          commentList.innerHTML = '<li>No comment</li>';
-        } else {
-          commentList.innerHTML = comments
-            .map((com) => `
-            <li>
-                <p>${com.creation_date} ${com.username}: ${com.comment}</p>
-            </li>`)
-            .join('');
-        }
+        await comment.onLoad(meal.idCategory);
       }
       const myModal = new Modal(this.commentModal, { keyboard: false });
       myModal.show();
     }));
   };
+
+  modalCommentForm = () => {
+    const comment = new CommentBox();
+    const modalCommentButton = document.getElementById('modalCommentButton');
+    modalCommentButton.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const itemId = document.getElementById('modalCommentId');
+      const itemUsername = document.getElementById('modalCommentName');
+      const itemComment = document.getElementById('modalCommentContent');
+
+      await comment.onSubmit({
+        item_id: itemId.value,
+        username: itemUsername.value,
+        comment: itemComment.value,
+      });
+      await comment.onLoad(itemId.value);
+      itemUsername.value = '';
+      itemComment.value = '';
+    });
+  }
 }
 
 export default Meal;

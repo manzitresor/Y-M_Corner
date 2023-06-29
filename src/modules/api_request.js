@@ -7,14 +7,13 @@ class APIRequest {
   }
 
   post = async (baseUrl, body) => {
-    const response = await fetch(`${baseUrl}`, {
+    await fetch(`${baseUrl}`, {
       method: 'POST',
       body: JSON.stringify(body),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
     });
-    return response.json();
   }
 }
 
