@@ -1,14 +1,7 @@
 import Request from './api_request.js';
-import { InvolvementAPI, InvolvementToken } from './config.js';
+import { likeUrl, appId } from './config.js';
 
 class CommentBox {
-    onLoad = async (itemId) => {
-      try {
-        return new Request()
-          .get(`${InvolvementAPI}${InvolvementToken}/comments?item_id=${itemId}`);
-      } catch (e) {
-        return [];
-      }
-    }
+  onLoad = async (itemId) => new Request().get(`${likeUrl}/${appId}/comments?item_id=${itemId}`);
 }
 export default CommentBox;
