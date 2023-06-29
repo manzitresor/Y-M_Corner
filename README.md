@@ -165,8 +165,8 @@ Feel free to check the <a href="https://github.com/manzitresor/js_Capstone/issue
 
 If you like this project,You can follow me on Github
   
-<a href ="https://github.com/manzitresor">manzitresor[@githubhandle]</a> 
-<a href ="https://github.com/yemidada">yemidada[@githubhandle]</a> 
+- manzitresor<a href ="https://github.com/manzitresor">[@githubhandle]</a> 
+- yemidada<a href ="https://github.com/yemidada">[@githubhandle]</a> 
 
 
 
