@@ -1,5 +1,6 @@
 import { Modal } from '../../node_modules/bootstrap/dist/js/bootstrap.js';
 import { toString, toJson } from './converter.js';
+import mealcardCounter from './mealCounter.js';
 // import { Modal } from 'bootstrap';
 import { ServerURL, appId, likeUrl } from './config.js';
 
@@ -7,6 +8,8 @@ class Meal {
   constructor() {
     this.mainContainer = document.querySelector('.main-container');
     this.commentModal = document.getElementById('mealComment');
+    this.totalMeals = document.querySelector('.totalMeals');
+    this.mealsArry = [];
   }
 
   loadFromServer = async () => {
@@ -16,9 +19,9 @@ class Meal {
   };
 
   loadContent = async () => {
-    const meals = await this.loadFromServer();
+    this.mealsArry = await this.loadFromServer();
     let episodes = '';
-    meals.forEach((res, id) => {
+    this.mealsArry.forEach((res, id) => {
       episodes += `
       <div class="col-md-3">
         <div class="meals-container">
@@ -40,6 +43,7 @@ class Meal {
     const likebtns = document.querySelectorAll('.likebtn');
     likebtns.forEach((likebtn) => this.createLike(likebtn, showLikes));
     this.showLike(showLikes);
+    mealcardCounter(this.totalMeals, this.mealsArry);
   };
 
   getLike = async () => {
