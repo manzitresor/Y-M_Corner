@@ -25,7 +25,7 @@
 - [📝 License](#license)
 
 
-# 📖 Add Header and footer counter <a name="about-project"></a>
+# 📖 Add Header and footer <a name="about-project"></a>
 
 **In this project, I added header and footer to the index.html file**
 
