@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { JSDOM } from 'jsdom';
-import mealcardCounter from '../src/modules/mealCounter';
+import mealcardCounter from '../src/modules/mealCounter.js';
 
 describe('mealcardsCounter', () => {
   const dom = new JSDOM();
