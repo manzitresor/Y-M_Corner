@@ -9,6 +9,8 @@ class Meal {
   constructor() {
     this.mainContainer = document.querySelector('.main-container');
     this.commentModal = document.getElementById('mealComment');
+    this.totalMeals = document.querySelector('.totalMeals');
+    this.mealsArry = [];
   }
 
   loadFromServer = async () => {
@@ -18,9 +20,9 @@ class Meal {
   };
 
   loadContent = async () => {
-    const meals = await this.loadFromServer();
+    this.mealsArry = await this.loadFromServer();
     let episodes = '';
-    meals.forEach((res, id) => {
+    this.mealsArry.forEach((res, id) => {
       episodes += `
       <div class="col-md-3">
         <div class="meals-container">
