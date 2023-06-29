@@ -1,0 +1,104 @@
+
+body {
+  background-color: #fff;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.navbar-nav li {
+  padding: 0 20px;
+  color: #a82d49;
+  font-weight: bold;
+}
+
+.navbar-nav li a {
+  color: #a82d49;
+}
+
+.meals-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #a82d49;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.like-container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.likebtn {
+  padding-top: 3px;
+}
+
+.likebtn:hover {
+  cursor: pointer;
+}
+
+.image {
+  margin: 10px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.meals {
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.showLikes {
+  position: absolute;
+  padding-top: 2%;
+  padding-left: 11.5%;
+  font-weight: bold;
+}
+
+.modal-header {
+  border: none;
+}
+
+.comment-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.comment,
+.reservation {
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.comment {
+  background-color: #333;
+}
+
+.reservation {
+  background-color: #a82d49;
+  width: 100%;
+}
+
+.comment:hover {
+  background-color: #a82d49;
+}
+
+.reservation:hover {
+  background-color: #333;
+}
+
+.capitalise {
+  text-transform: capitalize;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  margin-top: 24px;
+  padding: 16px 0;
+}
