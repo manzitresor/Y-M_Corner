@@ -86,6 +86,10 @@ body {
   background-color: #333;
 }
 
+.capitalise {
+  text-transform: capitalize;
+}
+
 footer {
   border-top: 1px solid #ccc;
   margin-top: 24px;

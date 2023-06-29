@@ -4,6 +4,8 @@ import { likeUrl, appId } from './config.js';
 class CommentBox {
   onLoad = async (itemId) => {
     const commentList = document.getElementById('comment-list');
+    const commentCounter = document.getElementById('commentCounter');
+
     let comments = await new Request().get(`${likeUrl}/${appId}/comments?item_id=${itemId}`);
 
     if (comments.error) {
@@ -15,10 +17,12 @@ class CommentBox {
       commentList.innerHTML = comments
         .map((com) => `
       <li>
-          <p>${com.creation_date} ${com.username}: ${com.comment}</p>
+          <p>${com.creation_date} <span class="capitalise">${com.username}</span>: <span class="capitalise">${com.comment}</span></p>
       </li>`)
         .join('');
     }
+
+    commentCounter.innerHTML = comments.length;
   };
 
   onSubmit = async (data) => {
