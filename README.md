@@ -1,12 +1,4 @@
 
-<a name="readme-top"></a>
-
-<div align="center">
-
-  <h3><b>YM Corner</b></h3>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -27,9 +19,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 YM Corner <a name="about-project"></a>
+# 📖 Y&M Corner <a name="about-project"></a>
 
- YM Corner is My capstone project for module two.
+ Y&M Corner is a user-friendly website designed to showcase a wide variety of meal categories, enabling users to explore and discover new and exciting food options. 
+ Users can also engage with the platform by liking meals and leaving comments.
 
 ## 🛠 Built With <a name="built-with"></a>
 
