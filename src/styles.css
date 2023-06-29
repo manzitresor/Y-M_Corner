@@ -55,6 +55,12 @@ body {
   border: none;
 }
 
+.comment-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 .comment,
 .reservation {
   text-align: center;
