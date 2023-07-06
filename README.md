@@ -62,7 +62,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Live Demo <a name="live-demo"></a>
-Live Demo Link: <a href="https://manzitresor.github.io/js_Capstone/dist/">Live demo</a>
+Live Demo Link: <a href="https://manzitresor.github.io/Y-M_Corner/dist/">Live demo</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
